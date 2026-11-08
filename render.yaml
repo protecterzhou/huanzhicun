@@ -1,0 +1,16 @@
+# Render Blueprint —— 在 Render 控制台选择 "New + / Blueprint" 指向本仓库即可自动创建
+services:
+  - type: web
+    name: huanzhicun
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install --omit=dev
+    startCommand: node --experimental-sqlite server/index.js
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: HOST
+        value: 0.0.0.0

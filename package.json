@@ -1,0 +1,14 @@
+{
+  "name": "huanzhicun",
+  "version": "0.1.0",
+  "private": true,
+  "description": "环智存 · 环保台账归档与合规管理平台",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "smoke": "node tools/smoke.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}
